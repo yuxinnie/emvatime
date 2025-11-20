@@ -1,4 +1,3 @@
-```javascript
 import React from 'react';
 import { motion } from 'framer-motion';
 import backgroundImage from '../assets/background.png';
@@ -10,7 +9,7 @@ const Result = () => {
             <div
                 className="absolute inset-0 z-0 opacity-80"
                 style={{
-                    backgroundImage: `url(${ backgroundImage })`,
+                    backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
@@ -35,13 +34,13 @@ const Result = () => {
                         key={i}
                         className="absolute rounded-full mix-blend-screen animate-pulse"
                         style={{
-                            left: `${ Math.random() * 100 }% `,
-                            top: `${ Math.random() * 100 }% `,
-                            width: `${ Math.random() * 20 + 5 } px`,
-                            height: `${ Math.random() * 20 + 5 } px`,
-                            backgroundColor: `hsl(${ Math.random() * 360 }, 100 %, 50 %)`,
-                            animationDelay: `${ Math.random() * 2 } s`,
-                            animationDuration: `${ Math.random() * 3 + 2 } s`
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                            width: `${Math.random() * 20 + 5}px`,
+                            height: `${Math.random() * 20 + 5}px`,
+                            backgroundColor: `hsl(${Math.random() * 360}, 100%, 50%)`,
+                            animationDelay: `${Math.random() * 2}s`,
+                            animationDuration: `${Math.random() * 3 + 2}s`
                         }}
                     />
                 ))}
