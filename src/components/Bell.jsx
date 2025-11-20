@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
+import bellImage from '../assets/bell_v2.png';
+import ropeImage from '../assets/rope.png';
+import bellSound from '../assets/bell-ring.m4a';
 
 const Bell = ({ onRing }) => {
     const [isRinging, setIsRinging] = useState(false);
@@ -18,7 +21,7 @@ const Bell = ({ onRing }) => {
 
     const playSound = () => {
         try {
-            const audio = new Audio('/bell-ring.m4a');
+            const audio = new Audio(bellSound);
             audio.volume = 0.5;
             audio.play().catch(e => console.log("Audio play failed (user interaction needed or file missing):", e));
         } catch (e) {
@@ -72,7 +75,7 @@ const Bell = ({ onRing }) => {
                 {/* Bell Image - using mask to hide square edges */}
                 <div className="relative z-10">
                     <img
-                        src="/bell_v2.png"
+                        src={bellImage}
                         alt="Christmas Bell"
                         className="w-64 h-auto select-none pointer-events-none"
                         style={{
